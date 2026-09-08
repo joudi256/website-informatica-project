@@ -10,4 +10,5 @@ Sollicitatie pagina
 Met afbeeldingen
 Duidelijk en gestructureerd
 
+'we're fatnatsic //we are not
  

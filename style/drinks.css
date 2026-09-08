@@ -1,0 +1,136 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+ 
+html{
+scroll-behavior:smooth;
+}
+ 
+body{
+font-family:'Poppins', sans-serif;
+background:#f5efe6;
+color:#333;
+}
+ 
+/* NAVIGATION */
+ 
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:#7b1e1e;
+position:sticky;
+top:0;
+z-index:1000;
+}
+ 
+nav h1{
+font-family:'Playfair Display', serif;
+color:white;
+}
+ 
+nav ul{
+list-style:none;
+display:flex;
+gap:20px;
+}
+ 
+nav a{
+text-decoration:none;
+color:white;
+}
+ 
+nav a:hover,
+nav a.active{
+color:#ffd700;
+}
+ 
+/* FLAG BAR */
+ 
+.flag-bar{
+height:6px;
+background:linear-gradient(to right,#009246 33%,white 33%,white 66%,#ce2b37 66%);
+}
+ 
+/* HEADER */
+ 
+header{
+text-align:center;
+padding:60px 20px;
+}
+ 
+header h2{
+font-family:'Playfair Display', serif;
+font-size:42px;
+}
+ 
+header p{
+margin-top:10px;
+color:#555;
+}
+ 
+/* CATEGORY NAV */
+ 
+.category-nav{
+text-align:center;
+margin-top:20px;
+}
+ 
+.category-nav a{
+margin:5px;
+padding:8px 14px;
+background:#7b1e1e;
+color:white;
+text-decoration:none;
+border-radius:5px;
+font-size:14px;
+}
+ 
+.category-nav a:hover{
+background:#a52a2a;
+}
+ 
+/* MENU SECTIONS */
+ 
+.section{
+max-width:900px;
+margin:40px auto;
+padding:0 20px;
+}
+ 
+.section h3{
+font-family:'Playfair Display', serif;
+font-size:28px;
+margin:35px 0 15px;
+border-bottom:2px solid #7b1e1e;
+display:inline-block;
+padding-bottom:3px;
+}
+ 
+.price-note{
+font-size:13px;
+color:#777;
+margin-bottom:15px;
+}
+ 
+.drink{
+display:flex;
+justify-content:space-between;
+padding:8px 0;
+border-bottom:1px dotted #ccc;
+}
+ 
+/* FOOTER */
+ 
+footer{
+background:#7b1e1e;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:60px;
+}
+ 
+

@@ -1,0 +1,198 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+ 
+html{
+    scroll-behavior:smooth;
+}
+ 
+body{
+    font-family:'Poppins', sans-serif;
+    background:#f5efe6;
+    color:#333;
+    line-height:1.6;
+}
+ 
+/* ================= NAV ================= */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:#7b1e1e;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+ 
+nav h1{
+    font-family:'Playfair Display', serif;
+    color:white;
+}
+ 
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+ 
+nav a{
+    text-decoration:none;
+    color:white;
+    position:relative;
+    padding-bottom:5px;
+    transition:0.3s ease;
+}
+ 
+nav a.active{
+    color:#ffd700;
+}
+ 
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0%;
+    height:2px;
+    background:#ffd700;
+    transition:0.3s ease;
+}
+ 
+nav a:hover::after{
+    width:100%;
+}
+ 
+/* ================= FLAG ================= */
+.flag-bar{
+    height:6px;
+    background:linear-gradient(to right,#009246 33%,white 33%,white 66%,#ce2b37 66%);
+}
+ 
+/* ================= HEADER ================= */
+header{
+    text-align:center;
+    padding:60px 20px 30px;
+}
+ 
+header h2{
+    font-family:'Playfair Display', serif;
+    font-size:40px;
+    margin-bottom:10px;
+}
+ 
+header p{
+    font-size:18px;
+    opacity:0.9;
+}
+ 
+/* ================= LANGUAGE BUTTONS ================= */
+.language-selector{
+    text-align:center;
+    margin:30px 0;
+}
+ 
+.language-selector button{
+    margin:5px;
+    padding:8px 14px;
+    border:none;
+    border-radius:5px;
+    background:#7b1e1e;
+    color:white;
+    font-weight:500;
+    cursor:pointer;
+    transition:0.3s;
+}
+ 
+.language-selector button:hover{
+    background:#a52a2a;
+}
+ 
+/* ================= MENU ================= */
+.menu-section{
+    max-width:900px;
+    margin:40px auto;
+    padding:30px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+ 
+.menu-section h3{
+    font-family:'Playfair Display', serif;
+    font-size:26px;
+    margin-top:30px;
+    margin-bottom:15px;
+    border-bottom:2px solid #7b1e1e;
+    display:inline-block;
+    padding-bottom:3px;
+    color:#7b1e1e;
+}
+ 
+.menu-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 0;
+    border-bottom:1px dotted #ccc;
+    font-size:16px;
+}
+ 
+.menu-item:last-child{
+    border-bottom:none;
+}
+ 
+.menu-item span:last-child{
+    font-weight:500;
+}
+ 
+/* ================= CHALLENGE SECTION ================= */
+.challenge-section{
+    max-width:900px;
+    margin:60px auto;
+    padding:40px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    text-align:center;
+}
+ 
+.challenge-section h2{
+    font-family:'Playfair Display', serif;
+    font-size:32px;
+    margin-bottom:10px;
+}
+ 
+.challenge-section h3{
+    margin-top:25px;
+    color:#7b1e1e;
+}
+ 
+.challenge-section ul{
+    list-style:none;
+    margin:10px 0;
+}
+ 
+.challenge-section li{
+    margin:6px 0;
+}
+ 
+/* ================= FOOTER ================= */
+footer{
+    background:#7b1e1e;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:60px;
+}
+ 
+/* ================= RESPONSIVE ================= */
+@media(max-width:600px){
+    header h2{
+        font-size:32px;
+    }
+ 
+    header p{
+        font-size:16px;
+    }
+ 
+    .menu-section{
+        padding:20px;
+    }
+}
