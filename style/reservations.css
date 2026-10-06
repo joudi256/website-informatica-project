@@ -1,9 +1,5 @@
 *{margin:0;padding:0;box-sizing:border-box;}
- 
-html{
-    scroll-behavior:smooth;
-}
- 
+html{scroll-behavior:smooth;}
 body{
     font-family:'Poppins', sans-serif;
     background:#f5efe6;
@@ -82,97 +78,80 @@ header p{
     opacity:0.9;
 }
  
-/* ================= LANGUAGE BUTTONS ================= */
-.language-selector{
-    text-align:center;
-    margin:30px 0;
+/* ================= CARD / FORM ================= */
+.card{
+    max-width:600px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
  
-.language-selector button{
-    margin:5px;
-    padding:8px 14px;
+.form-group{
+    margin-bottom:20px;
+}
+ 
+label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:500;
+}
+ 
+input, select, textarea{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-family:'Poppins', sans-serif;
+}
+ 
+textarea{
+    resize:vertical;
+    min-height:100px;
+}
+ 
+button{
+    width:100%;
+    padding:12px;
+    background-color:#7b1e1e;
+    color:white;
     border:none;
     border-radius:5px;
-    background:#7b1e1e;
-    color:white;
-    font-weight:500;
+    font-weight:600;
     cursor:pointer;
     transition:0.3s;
 }
  
-.language-selector button:hover{
-    background:#a52a2a;
+button:hover{
+    background-color:#a52a2a;
 }
  
-/* ================= MENU ================= */
-.menu-section{
-    max-width:900px;
-    margin:40px auto;
-    padding:30px;
-    background:white;
-    border-radius:10px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
-}
- 
-.menu-section h3{
-    font-family:'Playfair Display', serif;
-    font-size:26px;
-    margin-top:30px;
-    margin-bottom:15px;
-    border-bottom:2px solid #7b1e1e;
-    display:inline-block;
-    padding-bottom:3px;
-    color:#7b1e1e;
-}
- 
-.menu-item{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:10px 0;
-    border-bottom:1px dotted #ccc;
-    font-size:16px;
-}
- 
-.menu-item:last-child{
-    border-bottom:none;
-}
- 
-.menu-item span:last-child{
-    font-weight:500;
-}
- 
-/* ================= CHALLENGE SECTION ================= */
-.challenge-section{
-    max-width:900px;
-    margin:60px auto;
-    padding:40px;
-    background:white;
-    border-radius:10px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+.success-message{
+    display:none;
+    margin-bottom:20px;
+    padding:10px;
+    background:#e6ffe6;
+    border:1px solid #7b1e1e;
+    border-radius:5px;
     text-align:center;
 }
- 
-.challenge-section h2{
-    font-family:'Playfair Display', serif;
-    font-size:32px;
-    margin-bottom:10px;
+.error-border {
+  border: 2px solid red;
 }
  
-.challenge-section h3{
-    margin-top:25px;
-    color:#7b1e1e;
+.error {
+  color: red;
+  font-size: 0.8rem;
+}
+.error-border {
+  border: 2px solid red;
 }
  
-.challenge-section ul{
-    list-style:none;
-    margin:10px 0;
+.error {
+  color: red;
+  font-size: 0.8rem;
 }
- 
-.challenge-section li{
-    margin:6px 0;
-}
- 
 /* ================= FOOTER ================= */
 footer{
     background:#7b1e1e;
@@ -181,18 +160,27 @@ footer{
     padding:20px;
     margin-top:60px;
 }
+.error{
+    color:#b00020;
+    font-size:13px;
+    margin-top:5px;
+    display:block;
+}
+ 
+input.error-border,
+select.error-border,
+textarea.error-border{
+    border:1px solid #b00020;
+}
  
 /* ================= RESPONSIVE ================= */
 @media(max-width:600px){
     header h2{
         font-size:32px;
     }
- 
     header p{
         font-size:16px;
     }
- 
-    .menu-section{
-        padding:20px;
-    }
 }
+
+

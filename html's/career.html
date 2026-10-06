@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Careers | La Dolce Vita</title>
+ 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap%22 rel="stylesheet">
+<link href="../style/career.css" rel="stylesheet"/>
+</head>
+ 
+<body>
+ 
+<nav>
+<h1>La Dolce Vita</h1>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="menu.html">Menu</a></li>
+<li><a href="reservations.html">Reservations</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="career.html" class="active">Careers</a></li>
+<li><a href="challenge.html">Challenge</a></li>
+<li><a href="drinks.html">Drinks</a></li>
+<li><a href="story.html">Our Story</a></li>
+</ul>
+</nav>
+ 
+<div class="flag-bar"></div>
+ 
+<header>
+<h2>Join Our Team</h2>
+<p>Passion. Pasta. Professionalism.</p>
+</header>
+ 
+<div class="card">
+ 
+<p style="font-size:14px;color:#666;margin-bottom:20px;">
+Fill in the form below to apply. We usually respond within 3–5 business days.
+</p>
+ 
+<form onsubmit="return applyNow(event)">
+ 
+<div class="form-group">
+<label for="name">Full Name</label>
+<input type="text" id="name" required placeholder="e.g. Maria Rossi" autofocus>
+</div>
+ 
+<div class="form-group">
+<label for="position">Position</label>
+<select id="position" required>
+<option value="">Select a position</option>
+<option>Chef</option>
+<option>Pizza Chef</option>
+<option>Waiter/Waitress</option>
+<option>Dishwasher</option>
+<option>Manager</option>
+</select>
+</div>
+ 
+<div class="form-group">
+<label for="experience">Years of Experience</label>
+<input type="number" id="experience" min="0" max="50" required placeholder="0">
+</div>
+ 
+<div class="form-group">
+<label for="message">Why should we hire you?</label>
+<textarea id="message" required placeholder="Tell us about your skills and experience"></textarea>
+</div>
+ 
+<button type="submit">Submit Application</button>
+<button type="reset" class="secondary-btn">Clear Form</button>
+ 
+<p id="confirmation" class="confirmation">
+Grazie! Your application has been submitted. We will contact you soon.
+</p>
+ 
+</form>
+</div>
+ 
+<footer>
+© 2026 La Dolce Vita | Join The Family
+</footer>
+ 
+<script>
+function applyNow(event){
+event.preventDefault();
+document.getElementById("confirmation").style.display="block";
+return false;
+}
+</script>
+ 
+</body>
+</html>

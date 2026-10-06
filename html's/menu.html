@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -6,7 +6,7 @@
 <title>Menu | La Dolce Vita</title>
  
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap%22 rel="stylesheet">
-<link href="../style/menu.css" rel="stylesheet">
+<link href="../style/menu.css" rel="stylesheet"/>
 </head>
  
 <body>
@@ -16,7 +16,12 @@
 <ul>
 <li><a href="index.html">Home</a></li>
 <li><a href="menu.html" class="active">Menu</a></li>
+<li><a href="reservations.html">Reservations</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="career.html">Careers</a></li>
+<li><a href="challenge.html">Challenge</a></li>
 <li><a href="drinks.html">Drinks</a></li>
+<li><a href="story.html">Our Story</a></li>
 </ul>
 </nav>
  
@@ -27,7 +32,17 @@
 <p data-section="subtitle">Authentic Italian Cuisine</p>
 </header>
  
-
+<div class="language-selector">
+<button onclick="changeLanguage('it')">Italian</button>
+<button onclick="changeLanguage('en')">English</button>
+<button onclick="changeLanguage('nl')">Dutch</button>
+<button onclick="changeLanguage('de')">German</button>
+<button onclick="changeLanguage('fr')">French</button>
+<button onclick="changeLanguage('la')">Latin</button>
+<button onclick="changeLanguage('shakespeare')">Shakespeare</button>
+<button onclick="changeLanguage('pirate')">Pirate</button>
+<button onclick="changeLanguage('gibberish')">Gibberish</button>
+</div>
  
 <div class="menu-section">
 <h3 data-section="antipasti">Antipasti</h3>
@@ -105,58 +120,309 @@
 <div class="menu-item"><span data-key="Gelato Artigianale">Gelato Artigianale</span><span>€6.50</span></div>
 <div class="menu-item"><span data-key="Affogato al Caffè">Affogato al Caffè</span><span>€7.00</span></div>
  
-
+<section class="challenge-section">
+<h2>🍕 La Bestia – 1 Meter Pizza Challenge</h2>
+<p><em>Only the brave survive.</em></p>
+<h3>The Pizza</h3>
+<p>100 cm diameter. Approximately 4–5 kg. Half Margherita. Half Diavola. Burrata crown in the center.</p>
+<h3>Rules</h3>
+<ul>
+<li>2 participants only</li>
+<li>45 minutes</li>
+<li>No leftovers</li>
+<li>No bathroom breaks</li>
+<li>No external help</li>
+</ul>
+<h3>Prize</h3>
+<ul>
+<li>Free meal</li>
+<li>Wall of Fame photo</li>
+<li>“Conqueror of La Bestia” T-shirt</li>
+</ul>
+<h3>Wall of Fame</h3>
+<p>Marco & Luca – 38:12</p>
+<p>Sofia & Gianna – 41:45</p>
+<p>Alessandro & Matteo – 44:59</p>
+</section>
  
 <footer>© 2026 La Dolce Vita</footer>
-
+ 
 <script>
+// COMPLETE LANGUAGE TRANSLATIONS
 const translations = {
-    en: {
-        // Add your English translations here
-        title: "La Dolce Vita",
-        home: "Home",
-        menu: "Menu",
-        about: "About",
-        contact: "Contact"
-    },
-
-    fr: {
-        // Add your French translations here
-        title: "La Dolce Vita",
-        home: "Accueil",
-        menu: "Menu",
-        about: "À propos",
-        contact: "Contact"
-    }
+'it': {},
+'en': {
+title:"Our Menu",
+subtitle:"Authentic Italian Cuisine",
+antipasti:"Starters",
+zuppe:"Soups",
+pasta:"Pasta",
+pizza:"Pizza",
+secondi:"Main Courses",
+dolci:"Desserts",
+ 
+"Bruschetta al Pomodoro":"Bruschetta with Tomato",
+"Caprese Salad":"Caprese Salad",
+"Carpaccio di Manzo":"Beef Carpaccio",
+"Arancini Siciliani":"Sicilian Arancini",
+"Burrata con Pesto":"Burrata with Pesto",
+"Antipasto Misto (for 2)":"Mixed Starter (for 2)",
+ 
+"Minestrone":"Minestrone",
+"Zuppa di Pomodoro":"Tomato Soup",
+"Zuppa di Pesce":"Fish Soup",
+"Crema di Funghi":"Mushroom Soup",
+ 
+"Spaghetti Carbonara":"Spaghetti Carbonara",
+"Tagliatelle al Ragù":"Tagliatelle with Ragù",
+"Penne Arrabbiata":"Penne Arrabbiata",
+"Lasagna della Casa":"House Lasagna",
+"Ravioli Ricotta e Spinaci":"Ravioli with Ricotta and Spinach",
+"Linguine Frutti di Mare":"Seafood Linguine",
+"Gnocchi al Gorgonzola":"Gnocchi with Gorgonzola",
+"Pappardelle al Tartufo":"Pappardelle with Truffle",
+ 
+"Margherita":"Margherita",
+"Diavola":"Diavola",
+"Quattro Formaggi":"Four Cheese",
+"Prosciutto e Funghi":"Ham and Mushrooms",
+"Capricciosa":"Capricciosa",
+"Vegetariana":"Vegetarian",
+"Calzone Classico":"Classic Calzone",
+"Pizza Tartufo":"Truffle Pizza",
+ 
+"Pollo alla Parmigiana":"Chicken Parmigiana",
+"Saltimbocca alla Romana":"Saltimbocca Roman Style",
+"Bistecca alla Fiorentina":"Florentine Steak",
+"Salmone al Limone":"Salmon with Lemon",
+"Branzino al Forno":"Oven Baked Sea Bass",
+ 
+"Tiramisù":"Tiramisu",
+"Panna Cotta":"Panna Cotta",
+"Cannoli Siciliani":"Sicilian Cannoli",
+"Gelato Artigianale":"Artisan Ice Cream",
+"Affogato al Caffè":"Affogato with Coffee",
+kids:"Kids Menu",
+ 
+"Kids Margherita":"Kids Margherita Pizza",
+"Kids Pasta":"Kids Pasta with Tomato Sauce",
+"Kids Carbonara":"Kids Spaghetti Carbonara",
+"Kids Nuggets":"Chicken Nuggets & Fries",
+"Kids Gelato":"Kids Gelato",
+},
+'nl': {
+    title:"Ons Menu", subtitle:"Authentieke Italiaanse Keuken",
+    antipasti:"Voorgerechten", zuppe:"Soepen", pasta:"Pasta", pizza:"Pizza", secondi:"Hoofdgerechten", dolci:"Nagerechten",
+    "Bruschetta al Pomodoro":"Bruschetta met Tomaat","Caprese Salad":"Caprese Salade","Carpaccio di Manzo":"Rundercarpaccio",
+    "Arancini Siciliani":"Siciliaanse Arancini","Burrata con Pesto":"Burrata met Pesto","Antipasto Misto (for 2)":"Gemengd Voorgerecht (voor 2)",
+    "Minestrone":"Minestrone","Zuppa di Pomodoro":"Tomatensoep","Zuppa di Pesce":"Vissoep","Crema di Funghi":"Champignonsoep",
+    "Spaghetti Carbonara":"Spaghetti Carbonara","Tagliatelle al Ragù":"Tagliatelle met Ragù","Penne Arrabbiata":"Penne Arrabbiata",
+    "Lasagna della Casa":"Lasagne van het Huis","Ravioli Ricotta e Spinaci":"Ravioli Ricotta en Spinazie","Linguine Frutti di Mare":"Linguine Frutti di Mare",
+    "Gnocchi al Gorgonzola":"Gnocchi met Gorgonzola","Pappardelle al Tartufo":"Pappardelle met Truffel",
+    "Margherita":"Margherita","Diavola":"Diavola","Quattro Formaggi":"Vier Kazen","Prosciutto e Funghi":"Prosciutto en Champignons",
+    "Capricciosa":"Capricciosa","Vegetariana":"Vegetariana","Calzone Classico":"Calzone Classico","Pizza Tartufo":"Pizza Truffel",
+    "Pollo alla Parmigiana":"Kip Parmigiana","Saltimbocca alla Romana":"Saltimbocca alla Romana","Bistecca alla Fiorentina":"Bistecca alla Fiorentina",
+    "Salmone al Limone":"Zalm met Citroen","Branzino al Forno":"Branzino al Forno","Tiramisù":"Tiramisu","Panna Cotta":"Panna Cotta",
+    "Cannoli Siciliani":"Cannoli Siciliani","Gelato Artigianale":"Ambachtelijk IJs","Affogato al Caffè":"Affogato met Koffie",
+    kids:"Kindermenu",
+ 
+"Kids Margherita":"Kinder Margherita Pizza",
+"Kids Pasta":"Kinderpasta met Tomatensaus",
+"Kids Carbonara":"Kinder Spaghetti Carbonara",
+"Kids Nuggets":"Kipnuggets met Friet",
+"Kids Gelato":"Kinderijs",
+},
+'de': {
+    title:"Unsere Speisekarte", subtitle:"Authentische Italienische Küche",
+    antipasti:"Vorspeisen", zuppe:"Suppen", pasta:"Pasta", pizza:"Pizza", secondi:"Hauptgerichte", dolci:"Desserts",
+    "Bruschetta al Pomodoro":"Tomatenbruschetta","Caprese Salad":"Caprese Salat","Carpaccio di Manzo":"Rindercarpaccio",
+    "Arancini Siciliani":"Sizilianische Arancini","Burrata con Pesto":"Burrata mit Pesto","Antipasto Misto (for 2)":"Gemischte Vorspeise (für 2)",
+    "Minestrone":"Minestrone","Zuppa di Pomodoro":"Tomatensuppe","Zuppa di Pesce":"Fischsuppe","Crema di Funghi":"Pilzsuppe",
+    "Spaghetti Carbonara":"Spaghetti Carbonara","Tagliatelle al Ragù":"Tagliatelle mit Ragù","Penne Arrabbiata":"Penne Arrabbiata",
+    "Lasagna della Casa":"Hauslasagne","Ravioli Ricotta e Spinaci":"Ravioli mit Ricotta und Spinat","Linguine Frutti di Mare":"Linguine Meeresfrüchte",
+    "Gnocchi al Gorgonzola":"Gnocchi mit Gorgonzola","Pappardelle al Tartufo":"Pappardelle mit Trüffel",
+    "Margherita":"Margherita","Diavola":"Diavola","Quattro Formaggi":"Vier Käse","Prosciutto e Funghi":"Schinken & Pilze",
+    "Capricciosa":"Capricciosa","Vegetariana":"Vegetariana","Calzone Classico":"Calzone Klassik","Pizza Tartufo":"Pizza Trüffel",
+    "Pollo alla Parmigiana":"Hähnchen Parmigiana","Saltimbocca alla Romana":"Saltimbocca alla Romana","Bistecca alla Fiorentina":"Fiorentina Steak",
+    "Salmone al Limone":"Lachs mit Zitrone","Branzino al Forno":"Gebackener Branzino","Tiramisù":"Tiramisu","Panna Cotta":"Panna Cotta",
+    "Cannoli Siciliani":"Sizilianische Cannoli","Gelato Artigianale":"Handgemachtes Eis","Affogato al Caffè":"Affogato mit Kaffee",
+    kids:"Kindermenü",
+ 
+"Kids Margherita":"Kinder Margherita Pizza",
+"Kids Pasta":"Kinderpasta mit Tomatensauce",
+"Kids Carbonara":"Kinder Spaghetti Carbonara",
+"Kids Nuggets":"Chicken Nuggets mit Pommes",
+"Kids Gelato":"Kinder Gelato",
+},
+'fr': {
+    title:"Notre Menu", subtitle:"Cuisine Italienne Authentique",
+    antipasti:"Entrées", zuppe:"Soupes", pasta:"Pâtes", pizza:"Pizzas", secondi:"Plats Principaux", dolci:"Desserts",
+    "Bruschetta al Pomodoro":"Bruschetta à la Tomate","Caprese Salad":"Salade Caprese","Carpaccio di Manzo":"Carpaccio de Boeuf",
+    "Arancini Siciliani":"Arancini Siciliens","Burrata con Pesto":"Burrata au Pesto","Antipasto Misto (for 2)":"Assiette Mixte (pour 2)",
+    "Minestrone":"Minestrone","Zuppa di Pomodoro":"Soupe de Tomates","Zuppa di Pesce":"Soupe de Poisson","Crema di Funghi":"Crème de Champignons",
+    "Spaghetti Carbonara":"Spaghetti Carbonara","Tagliatelle al Ragù":"Tagliatelles au Ragù","Penne Arrabbiata":"Pennes Arrabbiata",
+    "Lasagna della Casa":"Lasagnes Maison","Ravioli Ricotta e Spinaci":"Raviolis Ricotta et Épinards","Linguine Frutti di Mare":"Linguine aux Fruits de Mer",
+    "Gnocchi al Gorgonzola":"Gnocchis au Gorgonzola","Pappardelle al Tartufo":"Pappardelles à la Truffe",
+    "Margherita":"Margherita","Diavola":"Diavola","Quattro Formaggi":"Quatre Fromages","Prosciutto e Funghi":"Jambon et Champignons",
+    "Capricciosa":"Capricciosa","Vegetariana":"Végétarienne","Calzone Classico":"Calzone Classique","Pizza Tartufo":"Pizza à la Truffe",
+    "Pollo alla Parmigiana":"Poulet Parmigiana","Saltimbocca alla Romana":"Saltimbocca à la Romaine","Bistecca alla Fiorentina":"Bistecca Fiorentina",
+    "Salmone al Limone":"Saumon au Citron","Branzino al Forno":"Bar au Four","Tiramisù":"Tiramisu","Panna Cotta":"Panna Cotta",
+    "Cannoli Siciliani":"Cannoli Siciliens","Gelato Artigianale":"Glace Artisanale","Affogato al Caffè":"Affogato au Café",
+    kids:"Menu Enfants",
+ 
+"Kids Margherita":"Pizza Margherita pour Enfants",
+"Kids Pasta":"Pâtes Enfants à la Sauce Tomate",
+"Kids Carbonara":"Spaghetti Carbonara pour Enfants",
+"Kids Nuggets":"Nuggets de Poulet & Frites",
+"Kids Gelato":"Glace Enfants",
+},
+ 
+ 
+'la': {
+    title:"Menu Nostrum", subtitle:"Culina Italica Vera",
+    antipasti:"Praeparata", zuppe:"Ius", pasta:"Pasta", pizza:"Pizzas", secondi:"Secundi", dolci:"Dulcia",
+    "Bruschetta al Pomodoro":"Bruschetta cum Lyco","Caprese Salad":"Salata Caprese","Carpaccio di Manzo":"Carpaccio Bovinum",
+    "Arancini Siciliani":"Arancini Siciliani","Burrata con Pesto":"Burrata cum Pesto","Antipasto Misto (for 2)":"Antipasti Mixtum (pro 2)",
+    "Minestrone":"Minestrone","Zuppa di Pomodoro":"Ius Lycii","Zuppa di Pesce":"Ius Piscis","Crema di Funghi":"Crema Fungorum",
+    "Spaghetti Carbonara":"Spaghetti Carbonara","Tagliatelle al Ragù":"Tagliatelle cum Ragù","Penne Arrabbiata":"Penne Irae",
+    "Lasagna della Casa":"Lasagna Domus","Ravioli Ricotta e Spinaci":"Ravioli Ricotta et Spinacia","Linguine Frutti di Mare":"Linguine Fructus Maris",
+    "Gnocchi al Gorgonzola":"Gnocchi cum Gorgonzola","Pappardelle al Tartufo":"Pappardelle cum Tuber",
+    "Margherita":"Margherita","Diavola":"Diavola","Quattro Formaggi":"Quattuor Casei","Prosciutto e Funghi":"Prosciutto et Fungos",
+    "Capricciosa":"Capricciosa","Vegetariana":"Vegetariana","Calzone Classico":"Calzone Classicum","Pizza Tartufo":"Pizza Tuber",
+    "Pollo alla Parmigiana":"Pullus Parmigiana","Saltimbocca alla Romana":"Saltimbocca Romana","Bistecca alla Fiorentina":"Bistecca Florentina",
+    "Salmone al Limone":"Salmo cum Citrone","Branzino al Forno":"Branzino Ad Focum","Tiramisù":"Tiramisù","Panna Cotta":"Panna Cotta",
+    "Cannoli Siciliani":"Cannoli Siciliani","Gelato Artigianale":"Gelatum Artificiale","Affogato al Caffè":"Affogato Caffae",
+    kids:"Menu Puerorum",
+ 
+"Kids Margherita":"Pizza Margherita Puerorum",
+"Kids Pasta":"Pasta Puerorum cum Ius Lycopersici",
+"Kids Carbonara":"Spaghetti Carbonara Puerorum",
+"Kids Nuggets":"Pulli Nuggets cum Frictis",
+"Kids Gelato":"Gelatum Puerorum",
+},
+'shakespeare': {
+    title:"The Grand Bill of Fare",
+    subtitle:"Authentick Delicacies of the Italian Realm",
+    antipasti:"Foretastes for thy Hungry Soul",
+    zuppe:"Cauldrons of Warm'd Broth",
+    pasta:"Twirl'd Ribbons of Wheat",
+    pizza:"Roundels of Melted Cheese",
+    secondi:"Hearty Dishes for the Noble Belly",
+    dolci:"Sugared Delights & Sweet Temptations",
+ 
+    "Bruschetta al Pomodoro":"Toast of the Crimson Tomato",
+    "Caprese Salad":"Garden of Mozzarella & Scarlet Fruit",
+    "Carpaccio di Manzo":"Thin Slices of the Noble Ox",
+    "Arancini Siciliani":"Golden Orbs of Rice from Sicily",
+    "Burrata con Pesto":"Silken Burrata with Green Herb Potion",
+    "Antipasto Misto (for 2)":"A Platter of Varied Nibbles for Two Fair Souls",
+ 
+    "Minestrone":"A Peasant’s Pot of Garden Stew",
+    "Zuppa di Pomodoro":"Velvet Soup of the Blushing Tomato",
+    "Zuppa di Pesce":"Broth of the Ocean’s Bounty",
+    "Crema di Funghi":"Cream'd Mushrooms of the Forest Floor",
+ 
+    "Spaghetti Carbonara":"Long Strands in a Creamy Carbonara Cloak",
+    "Tagliatelle al Ragù":"Broad Ribbons Bathed in a Hearty Ragù",
+    "Penne Arrabbiata":"Fiery Quills of Pasta in Angry Sauce",
+    "Lasagna della Casa":"Layer'd Lasagna of the Noble House",
+    "Ravioli Ricotta e Spinaci":"Stuffed Pillows of Ricotta & Verdant Spinach",
+    "Linguine Frutti di Mare":"Sea-Kissed Linguine of Neptune’s Table",
+    "Gnocchi al Gorgonzola":"Soft Dumplings in the Blue Cheese Mist",
+    "Pappardelle al Tartufo":"Wide Ribbons Crown’d with Fragrant Truffle",
+ 
+    "Margherita":"The Queen’s Own Cheese & Tomato Round",
+    "Diavola":"The Devil’s Spicy Pie",
+    "Quattro Formaggi":"The Four Cheeses of Glory",
+    "Prosciutto e Funghi":"Ham & Forest Mushrooms upon a Round Crust",
+    "Capricciosa":"The Whimsical Pizza of Many Treasures",
+    "Vegetariana":"The Garden Lover’s Delight",
+    "Calzone Classico":"A Folded Bread Purse Stuff'd with Goodness",
+    "Pizza Tartufo":"The Truffle Crown'd Feast",
+ 
+    "Pollo alla Parmigiana":"Chicken Baked Beneath Parmigiana Majesty",
+    "Saltimbocca alla Romana":"Roman Veal that Leapeth to Thy Mouth",
+    "Bistecca alla Fiorentina":"The Great Florentine Steak of Kings",
+    "Salmone al Limone":"Salmon Kiss'd by the Lemon Sun",
+    "Branzino al Forno":"Sea Bass Roasted in the Baker’s Hearth",
+ 
+    "Tiramisù":"The Heavenly Lift of Coffee & Cream",
+    "Panna Cotta":"Silken Cream of Sweet Delight",
+    "Cannoli Siciliani":"Crisp Tubes Fill'd with Sugared Ricotta",
+    "Gelato Artigianale":"Hand-Churn'd Frozen Nectar",
+    "Affogato al Caffè":"Ice Cream Drown'd in the Dark Elixir of Coffee",
+    kids:"The Little Lords' Feast",
+ 
+"Kids Margherita":"A Small Margherita Pie for Younglings",
+"Kids Pasta":"Tender Pasta in Sweet Tomato Sauce",
+"Kids Carbonara":"Little Spaghetti in Creamy Carbonara",
+"Kids Nuggets":"Golden Chicken Bites with Fries",
+"Kids Gelato":"Sweet Frozen Cream for the Young",
+ 
+},
+'pirate': {
+    title:"Thar Menu", subtitle:"Italian Grub fer Ye Mateys",
+    antipasti:"Starters", zuppe:"Broths", pasta:"Pasta", pizza:"Pizzas", secondi:"Mains", dolci:"Sweeties",
+    "Bruschetta al Pomodoro":"Bruschetta o' Tomatoes","Caprese Salad":"Caprese Salad","Carpaccio di Manzo":"Beef Carpaccio",
+    "Arancini Siciliani":"Sicilian Arancini","Burrata con Pesto":"Burrata wit Pesto","Antipasto Misto (for 2)":"Mixed Starters (fer 2)",
+    "Minestrone":"Minestrone","Zuppa di Pomodoro":"Tomato Broth","Zuppa di Pesce":"Fish Broth","Crema di Funghi":"Mushroom Cream",
+    "Spaghetti Carbonara":"Spaghetti Carbonara","Tagliatelle al Ragù":"Tagliatelle wit Ragù","Penne Arrabbiata":"Penne Arrabbiata",
+    "Lasagna della Casa":"House Lasagna","Ravioli Ricotta e Spinaci":"Ravioli wit Ricotta & Spinach","Linguine Frutti di Mare":"Seafood Linguine",
+    "Gnocchi al Gorgonzola":"Gnocchi wit Gorgonzola","Pappardelle al Tartufo":"Pappardelle wit Truffle",
+    "Margherita":"Margherita","Diavola":"Diavola","Quattro Formaggi":"Four Cheeses","Prosciutto e Funghi":"Ham 'n Mushrooms",
+    "Capricciosa":"Capricciosa","Vegetariana":"Vegetarian","Calzone Classico":"Classic Calzone","Pizza Tartufo":"Truffle Pizza",
+    "Pollo alla Parmigiana":"Chicken Parmigiana","Saltimbocca alla Romana":"Saltimbocca o' Roma","Bistecca alla Fiorentina":"Florentine Steak",
+    "Salmone al Limone":"Salmon wit Lemon","Branzino al Forno":"Oven Branzino","Tiramisù":"Tiramisu","Panna Cotta":"Panna Cotta",
+    "Cannoli Siciliani":"Sicilian Cannoli","Gelato Artigianale":"Artisan Ice Cream","Affogato al Caffè":"Coffee Affogato",
+    kids:"Little Mateys Menu",
+ 
+"Kids Margherita":"Lil' Margherita Pizza",
+"Kids Pasta":"Lil' Pasta wit Tomato Sauce",
+"Kids Carbonara":"Lil' Spaghetti Carbonara",
+"Kids Nuggets":"Chicken Nuggets 'n Fries",
+"Kids Gelato":"Lil' Gelato",
+},
+'gibberish': {
+    title:"Menyoo Blop", subtitle:"Italish YumYum",
+    antipasti:"FooFoo", zuppe:"Slop", pasta:"Noodlies", pizza:"Cheezy Rounds", secondi:"Big Bites", dolci:"Sweetums",
+    "Bruschetta al Pomodoro":"Brushy Tomato","Caprese Salad":"Capy Salad","Carpaccio di Manzo":"Beefy Carp","Arancini Siciliani":"Rice Balls","Burrata con Pesto":"Burr Pesto",
+    "Antipasto Misto (for 2)":"Mixy Starter (2)","Minestrone":"Minz Soup","Zuppa di Pomodoro":"Tommy Soup","Zuppa di Pesce":"Fishy Soup","Crema di Funghi":"Mush Soup",
+    "Spaghetti Carbonara":"Spag Carbo","Tagliatelle al Ragù":"Tag Ragu","Penne Arrabbiata":"Penny Hot","Lasagna della Casa":"House Lasag","Ravioli Ricotta e Spinaci":"Rav Spin","Linguine Frutti di Mare":"Sea Noods",
+    "Gnocchi al Gorgonzola":"Gor Gnoc","Pappardelle al Tartufo":"Papp Truff","Margherita":"Margh","Diavola":"Diav","Quattro Formaggi":"4 Cheezy","Prosciutto e Funghi":"Ham Fungy","Capricciosa":"Capri","Vegetariana":"Veggy","Calzone Classico":"Calzo","Pizza Tartufo":"Truff Pizza",
+    "Pollo alla Parmigiana":"Chicky Parm","Saltimbocca alla Romana":"Salty Roma","Bistecca alla Fiorentina":"Fior Steak","Salmone al Limone":"Lemon Salmon","Branzino al Forno":"Buzzy Branz","Tiramisù":"Tiri","Panna Cotta":"PanCot","Cannoli Siciliani":"Can Sic","Gelato Artigianale":"Icey Creamy","Affogato al Caffè":"Affy Coffee",
+    kids:"Smol Nomz",
+ 
+"Kids Margherita":"Smol Margh Pizza",
+"Kids Pasta":"Smol Noodz wit Tommy Sauce",
+"Kids Carbonara":"Smol Spag Carbo",
+"Kids Nuggets":"Chicky Nugs n FryFry",
+"Kids Gelato":"Smol Icey",
+}
 };
-
-function changeLanguage(lang) {
-
-    // Italian = original language
-    if (lang === "it") {
-        location.reload();
-        return;
+ 
+function changeLanguage(lang){
+ 
+// Italian resets to original
+if(lang === "it"){
+location.reload();
+return;
+}
+ 
+document.querySelectorAll('[data-section]').forEach(el=>{
+    const key = el.getAttribute('data-section');
+    if(translations[lang] && translations[lang][key]){
+        el.textContent = translations[lang][key];
     }
-
-    // Change elements with data-section
-    document.querySelectorAll("[data-section]").forEach(el => {
-        const key = el.getAttribute("data-section");
-
-        if (translations[lang] && translations[lang][key]) {
-            el.textContent = translations[lang][key];
-        }
-    });
-
-    // Change menu items
-    document.querySelectorAll(".menu-item span[data-key]").forEach(el => {
-        const key = el.getAttribute("data-key");
-
-        if (translations[lang] && translations[lang][key]) {
-            el.textContent = translations[lang][key];
-        }
-    });
+});
+ 
+document.querySelectorAll('.menu-item span[data-key]').forEach(el=>{
+    const key = el.getAttribute('data-key');
+    if(translations[lang] && translations[lang][key]){
+        el.textContent = translations[lang][key];
+    }
+});
 }
 </script>
-
+ 
 </body>
 </html>
