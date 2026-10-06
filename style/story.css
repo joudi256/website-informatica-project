@@ -1,0 +1,152 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+ 
+html{
+    scroll-behavior:smooth;
+}
+ 
+body{
+    font-family:'Poppins', sans-serif;
+    background:#f5efe6;
+    color:#333;
+    line-height:1.6;
+}
+ 
+/* ================= NAV ================= */
+ 
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:#7b1e1e;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+ 
+nav h1{
+    font-family:'Playfair Display', serif;
+    color:white;
+}
+ 
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+ 
+nav a{
+    text-decoration:none;
+    color:white;
+    position:relative;
+    padding-bottom:5px;
+    transition:0.3s ease;
+}
+ 
+nav a.active{
+    color:#ffd700;
+}
+ 
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0%;
+    height:2px;
+    background:#ffd700;
+    transition:0.3s ease;
+}
+ 
+nav a:hover::after{
+    width:100%;
+}
+ 
+/* ================= FLAG ================= */
+ 
+.flag-bar{
+    height:6px;
+    background:linear-gradient(
+        to right,
+        #009246 33%,
+        white 33%,
+        white 66%,
+        #ce2b37 66%
+    );
+}
+ 
+/* ================= STORY ================= */
+ 
+.story{
+    max-width:800px;
+    margin:60px auto;
+    padding:30px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+ 
+.story h2{
+    font-family:'Playfair Display', serif;
+    font-size:40px;
+    margin-bottom:20px;
+    color:#7b1e1e;
+}
+ 
+.story p{
+    margin-bottom:20px;
+    font-size:16px;
+}
+ 
+.quote{
+    font-style:italic;
+    font-size:18px;
+    margin:30px 0;
+    padding:15px 20px;
+    border-left:4px solid #7b1e1e;
+    background:#f5efe6;
+    border-radius:0 5px 5px 0;
+}
+ 
+/* ================= FOOTER ================= */
+ 
+footer{
+    background:#7b1e1e;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:60px;
+}
+ 
+/* ================= RESPONSIVE ================= */
+ 
+@media(max-width:600px){
+ 
+    nav{
+        padding:20px;
+    }
+ 
+    nav ul{
+        gap:12px;
+    }
+ 
+    .story{
+        margin:30px 20px;
+        padding:20px;
+    }
+ 
+    .story h2{
+        font-size:32px;
+    }
+ 
+    .story p{
+        font-size:16px;
+    }
+ 
+    .quote{
+        font-size:17px;
+    }
+}
+
