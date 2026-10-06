@@ -1,4 +1,8 @@
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
  
 html{
     scroll-behavior:smooth;
@@ -12,6 +16,7 @@ body{
 }
  
 /* ================= NAV ================= */
+ 
 nav{
     display:flex;
     justify-content:space-between;
@@ -60,12 +65,20 @@ nav a:hover::after{
 }
  
 /* ================= FLAG ================= */
+ 
 .flag-bar{
     height:6px;
-    background:linear-gradient(to right,#009246 33%,white 33%,white 66%,#ce2b37 66%);
+    background:linear-gradient(
+        to right,
+        #009246 33%,
+        white 33%,
+        white 66%,
+        #ce2b37 66%
+    );
 }
  
 /* ================= HEADER ================= */
+ 
 header{
     text-align:center;
     padding:60px 20px 30px;
@@ -82,31 +95,10 @@ header p{
     opacity:0.9;
 }
  
-/* ================= LANGUAGE BUTTONS ================= */
-.language-selector{
-    text-align:center;
-    margin:30px 0;
-}
+/* ================= CARD ================= */
  
-.language-selector button{
-    margin:5px;
-    padding:8px 14px;
-    border:none;
-    border-radius:5px;
-    background:#7b1e1e;
-    color:white;
-    font-weight:500;
-    cursor:pointer;
-    transition:0.3s;
-}
- 
-.language-selector button:hover{
-    background:#a52a2a;
-}
- 
-/* ================= MENU ================= */
-.menu-section{
-    max-width:900px;
+.card{
+    max-width:600px;
     margin:40px auto;
     padding:30px;
     background:white;
@@ -114,66 +106,85 @@ header p{
     box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
  
-.menu-section h3{
-    font-family:'Playfair Display', serif;
-    font-size:26px;
-    margin-top:30px;
-    margin-bottom:15px;
-    border-bottom:2px solid #7b1e1e;
-    display:inline-block;
-    padding-bottom:3px;
-    color:#7b1e1e;
+/* ================= FORM ================= */
+ 
+.form-group{
+    margin-bottom:20px;
 }
  
-.menu-item{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:10px 0;
-    border-bottom:1px dotted #ccc;
-    font-size:16px;
-}
- 
-.menu-item:last-child{
-    border-bottom:none;
-}
- 
-.menu-item span:last-child{
+label{
+    display:block;
+    margin-bottom:6px;
     font-weight:500;
 }
  
-/* ================= CHALLENGE SECTION ================= */
-.challenge-section{
-    max-width:900px;
-    margin:60px auto;
-    padding:40px;
-    background:white;
-    border-radius:10px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
-    text-align:center;
+input,
+select,
+textarea{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-family:'Poppins', sans-serif;
+    font-size:15px;
+    transition:0.3s ease;
 }
  
-.challenge-section h2{
-    font-family:'Playfair Display', serif;
-    font-size:32px;
-    margin-bottom:10px;
+input:focus,
+select:focus,
+textarea:focus{
+    outline:none;
+    border-color:#7b1e1e;
+    box-shadow:0 0 0 2px rgba(123,30,30,0.1);
 }
  
-.challenge-section h3{
-    margin-top:25px;
-    color:#7b1e1e;
+textarea{
+    resize:vertical;
+    min-height:100px;
 }
  
-.challenge-section ul{
-    list-style:none;
-    margin:10px 0;
+/* ================= BUTTON ================= */
+ 
+button{
+    width:100%;
+    padding:12px;
+    background:#7b1e1e;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-weight:500;
+    font-family:'Poppins', sans-serif;
+    cursor:pointer;
+    transition:0.3s ease;
+    margin-top:10px;
 }
  
-.challenge-section li{
-    margin:6px 0;
+button:hover{
+    background:#a52a2a;
+}
+ 
+/* ================= SECONDARY BUTTON ================= */
+ 
+.secondary-btn{
+    background:#ccc;
+    color:#333;
+}
+ 
+.secondary-btn:hover{
+    background:#bbb;
+}
+ 
+/* ================= CONFIRMATION ================= */
+ 
+.confirmation{
+    display:none;
+    margin-top:15px;
+    color:green;
+    font-weight:500;
 }
  
 /* ================= FOOTER ================= */
+ 
 footer{
     background:#7b1e1e;
     color:white;
@@ -183,7 +194,9 @@ footer{
 }
  
 /* ================= RESPONSIVE ================= */
+ 
 @media(max-width:600px){
+ 
     header h2{
         font-size:32px;
     }
@@ -192,7 +205,16 @@ footer{
         font-size:16px;
     }
  
-    .menu-section{
+    .card{
+        margin:30px 20px;
         padding:20px;
+    }
+ 
+    nav{
+        padding:20px;
+    }
+ 
+    nav ul{
+        gap:12px;
     }
 }
