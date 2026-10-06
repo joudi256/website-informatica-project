@@ -117,8 +117,8 @@ header p{
 .menu-section h3{
     font-family:'Playfair Display', serif;
     font-size:26px;
-    margin-top:30px;
-    margin-bottom:15px;
+    margin-top:0;
+    margin-bottom:20px;
     border-bottom:2px solid #7b1e1e;
     display:inline-block;
     padding-bottom:3px;
@@ -128,8 +128,9 @@ header p{
 .menu-item{
     display:flex;
     justify-content:space-between;
-    align-items:center;
-    padding:10px 0;
+    align-items:flex-start;
+    gap:20px;
+    padding:12px 0;
     border-bottom:1px dotted #ccc;
     font-size:16px;
 }
@@ -138,8 +139,22 @@ header p{
     border-bottom:none;
 }
  
-.menu-item span:last-child{
+.menu-item > div{
+    flex:1;
+    min-width:0;
+}
+ 
+.menu-item span:first-child{
+    display:block;
+    font-weight:600;
+    color:#2b1a1a;
+}
+ 
+.menu-item > span:last-child{
+    flex-shrink:0;
     font-weight:500;
+    color:#7b1e1e;
+    padding-top:2px;
 }
  
 /* ================= CHALLENGE SECTION ================= */
@@ -195,4 +210,11 @@ footer{
     .menu-section{
         padding:20px;
     }
+}
+.ingredients {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 4px;
+    font-style: italic;
+    line-height: 1.5;
 }
