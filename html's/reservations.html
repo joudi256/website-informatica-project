@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Reserve your table at La Dolce Vita – authentic Italian dining in Vught.">
+<title>Reservations | La Dolce Vita</title>
+ 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap%22 rel="stylesheet">
+<link href="../style/reservations.css" rel="stylesheet"/>
+ 
+</head>
+ 
+ 
+<body>
+ 
+<nav>
+<h1>La Dolce Vita</h1>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="menu.html">Menu</a></li>
+<li><a href="reservations.html" class="active">Reservations</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="career.html">Careers</a></li>
+<li><a href="challenge.html">Challenge</a></li>
+<li><a href="drinks.html">Drinks</a></li>
+<li><a href="story.html">Our Story</a></li>
+</ul>
+</nav>
+ 
+<div class="flag-bar"></div>
+ 
+<header>
+<h2>Reserve Your Table</h2>
+<p>We look forward to welcoming you 🍷</p>
+</header>
+ 
+<div class="card">
+<form id="reservationForm">
+ 
+<div class="success-message" id="successMessage">
+✔ Reservation Confirmed! We look forward to welcoming you 🍷
+</div>
+ 
+ 
+ 
+<!-- NAME -->
+<div class="form-group">
+<label for="name">Full Name</label>
+<input type="text" id="name" required placeholder="John Doe">
+<small class="error" id="nameError"></small>
+</div>
+ 
+<!-- EMAIL -->
+<div class="form-group">
+<label for="email">Email</label>
+<input type="email" id="email" required placeholder="example@email.com">
+<small class="error" id="emailError"></small>
+</div>
+ 
+<!-- PHONE -->
+<div class="form-group">
+<label for="phone">Phone Number</label>
+<input type="tel" id="phone" required placeholder="+31 6 12345678">
+<small class="error" id="phoneError"></small>
+</div>
+ 
+<!-- DATE -->
+<div class="form-group">
+<label for="date">Reservation Date</label>
+<input type="date" id="date" required>
+<small class="error" id="dateError"></small>
+</div>
+ 
+<!-- TIME -->
+<div class="form-group">
+<label for="time">Time</label>
+<input type="time" id="time" required>
+<small class="error" id="timeError"></small>
+</div>
+ 
+<!-- GUESTS -->
+<div class="form-group">
+<label for="guests">Number of Guests</label>
+<select id="guests" required>
+<option value="">Select</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6+">6+</option>
+</select>
+<small class="error" id="guestsError"></small>
+</div>
+ 
+<!-- REQUESTS -->
+<div class="form-group">
+<label for="requests">Special Requests</label>
+<textarea id="requests"></textarea>
+<small class="error" id="requestsError"></small>
+</div>
+ 
+<button type="submit">Reserve Table</button>
+ 
+</form>
+</div>
+ 
+<footer>
+© 2026 La Dolce Vita | Grazie Mille
+</footer>
+<script>
+// WAIT UNTIL HTML IS LOADED
+document.addEventListener("DOMContentLoaded", function(){
+ 
+// FORM & SUCCESS MESSAGE
+const form = document.getElementById('reservationForm');
+const successMessage = document.getElementById('successMessage');
+ 
+// INPUTS
+const name = document.getElementById('name');
+const email = document.getElementById('email');
+const phone = document.getElementById('phone');
+const date = document.getElementById('date');
+const time = document.getElementById('time');
+const guests = document.getElementById('guests');
+ 
+// ERRORS
+const nameError = document.getElementById('nameError');
+const emailError = document.getElementById('emailError');
+const phoneError = document.getElementById('phoneError');
+const dateError = document.getElementById('dateError');
+const timeError = document.getElementById('timeError');
+const guestsError = document.getElementById('guestsError');
+ 
+// OPENING HOURS
+const openingHours = {
+    0: null,
+    1: ["17:00","22:00"],
+    2: ["17:00","22:00"],
+    3: ["17:00","22:00"],
+    4: ["17:00","23:00"],
+    5: ["17:00","23:30"],
+    6: ["16:00","23:30"]
+};
+ 
+// SET MIN DATE = TODAY
+const todayDate = new Date().toISOString().split("T")[0];
+date.setAttribute("min", todayDate);
+ 
+// HELPER
+function getDayFromDate(dateString){
+    return new Date(dateString).getDay();
+}
+ 
+// BASIC FIELD CHECK
+function validateField(input, errorEl, message){
+    if(!input.value.trim()){
+        errorEl.textContent = message;
+        input.classList.add("error-border");
+        return false;
+    }
+ 
+    if(input.id === "name" && input.value.trim().length < 2){
+        errorEl.textContent = "Name too short";
+        input.classList.add("error-border");
+        return false;
+    }
+ 
+    errorEl.textContent = "";
+    input.classList.remove("error-border");
+    return true;
+}
+ 
+// EMAIL VALIDATION
+function validateEmail(){
+    const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
+    if(!pattern.test(email.value)){
+        emailError.textContent = "Enter a valid email address";
+        email.classList.add("error-border");
+        return false;
+    }
+    emailError.textContent = "";
+    email.classList.remove("error-border");
+    return true;
+}
+ 
+// PHONE VALIDATION
+function validatePhone(){
+    if(phone.value.length < 10){
+        phoneError.textContent = "Phone number too short";
+        phone.classList.add("error-border");
+        return false;
+    }
+    phoneError.textContent = "";
+    phone.classList.remove("error-border");
+    return true;
+}
+ 
+// TIME + DATE VALIDATION
+function validateTime(){
+    if(!validateField(date, dateError, "Select a date")) return false;
+    if(!validateField(time, timeError, "Select a time")) return false;
+ 
+    const selectedDate = new Date(date.value);
+    const today = new Date();
+ 
+    const selectedDay = selectedDate.getDay();
+    const hours = openingHours[selectedDay];
+ 
+    // CLOSED DAY
+    if(!hours){
+        timeError.textContent = "We are closed on Sundays";
+        time.classList.add("error-border");
+        return false;
+    }
+ 
+    // OUTSIDE OPENING HOURS
+    if(time.value < hours[0] || time.value > hours[1]){
+        timeError.textContent = `Select a time between ${hours[0]} - ${hours[1]}`;
+        time.classList.add("error-border");
+        return false;
+    }
+ 
+    // TIME IN THE PAST (TODAY)
+    if(date.value === today.toISOString().split("T")[0]){
+        const currentTime = today.toTimeString().slice(0,5);
+        if(time.value < currentTime){
+            timeError.textContent = "This time has already passed";
+            time.classList.add("error-border");
+            return false;
+        }
+    }
+ 
+    timeError.textContent = "";
+    time.classList.remove("error-border");
+    return true;
+}
+ 
+// REAL-TIME VALIDATION
+name.addEventListener("input", ()=> validateField(name, nameError, "Name is required"));
+name.addEventListener("blur", ()=> validateField(name, nameError, "Name is required"));
+ 
+email.addEventListener("input", validateEmail);
+email.addEventListener("blur", validateEmail);
+ 
+phone.addEventListener("input", ()=>{
+    phone.value = phone.value.replace(/[^0-9+ ]/g, '');
+    validatePhone();
+});
+phone.addEventListener("blur", validatePhone);
+ 
+date.addEventListener("change", validateTime);
+time.addEventListener("change", validateTime);
+time.addEventListener("input", validateTime);
+ 
+guests.addEventListener("change", ()=> validateField(guests, guestsError, "Select number of guests"));
+guests.addEventListener("blur", ()=> validateField(guests, guestsError, "Select number of guests"));
+ 
+// SUBMIT
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+ 
+    let valid = true;
+ 
+    if(!validateField(name, nameError, "Name is required")) valid = false;
+    if(!validateEmail()) valid = false;
+    if(!validatePhone()) valid = false;
+    if(!validateField(guests, guestsError, "Select number of guests")) valid = false;
+    if(!validateTime()) valid = false;
+ 
+    if(valid){
+        successMessage.style.display = 'block';
+        successMessage.innerHTML =
+            "✔ Reservation Confirmed!<br>We look forward to welcoming you at La Dolce Vita 🍷";
+        successMessage.scrollIntoView({behavior:"smooth"});
+        form.reset();
+    }
+});
+ 
+});
+</script>
+ 
+</body>
+</html>
