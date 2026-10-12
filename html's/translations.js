@@ -42,6 +42,123 @@
         }
     };
 
+    Object.assign(translations.nl, {
+        "La Dolce Vita | Italian Restaurant": "La Dolce Vita | Italiaans restaurant",
+        "Menu | La Dolce Vita": "Menu | La Dolce Vita",
+        "Reservations | La Dolce Vita": "Reserveringen | La Dolce Vita",
+        "Contact | La Dolce Vita": "Contact | La Dolce Vita",
+        "Careers | La Dolce Vita": "Vacatures | La Dolce Vita",
+        "La Bestia Challenge | La Dolce Vita": "La Bestia-uitdaging | La Dolce Vita",
+        "Drinks | La Dolce Vita": "Dranken | La Dolce Vita",
+        "Our Story | La Dolce Vita": "Ons verhaal | La Dolce Vita",
+        "Benvenuti a La Dolce Vita": "Welkom bij La Dolce Vita",
+        "Reserve Table": "Reserveer een tafel",
+        "John Doe": "Jan Jansen",
+        "Choose language": "Kies een taal",
+        "We look forward to welcoming you at La Dolce Vita 🍷": "We kijken ernaar uit je te verwelkomen bij La Dolce Vita 🍷",
+        "Chianti Classico (Tuscany)": "Chianti Classico (Toscane)",
+        "Barolo (Piedmont)": "Barolo (Piëmont)",
+        "Nero d'Avola (Sicily)": "Nero d'Avola (Sicilië)",
+        "Vermentino (Sardinia)": "Vermentino (Sardinië)",
+        "Caprese Salad": "Capresesalade",
+        "Pasta": "Pasta",
+        "Pizza": "Pizza",
+        "San Pellegrino Sparkling Water": "Bruiswater van San Pellegrino",
+        "Still Water": "Plat water",
+        "Fresh Orange Juice": "Verse jus d'orange",
+        "Homemade Lemonade": "Huisgemaakte limonade",
+        "🍕 La Bestia – 1 Meter Pizza Challenge": "🍕 La Bestia – 1-meter-pizza-uitdaging",
+        "100 cm diameter": "100 cm doorsnee",
+        "• Approximately": "• Ongeveer",
+        "Half Margherita. Half Diavola. Burrata crown in the center.": "Half Margherita, half Diavola, met burrata in het midden.",
+        "Approximately 4–5 kg": "Ongeveer 4–5 kg",
+        "✔ Reservation Confirmed!": "✔ Reservering bevestigd!",
+        "Our goal has always been simple: create memorable meals and a place where people feel at home, says Marco.": "Ons doel is altijd eenvoudig geweest: onvergetelijke maaltijden maken en een plek creëren waar mensen zich thuis voelen, zegt Marco.",
+        "\"Our goal has always been simple: create memorable meals and a place where people feel at home,\" says Marco.": "\"Ons doel is altijd eenvoudig geweest: onvergetelijke maaltijden maken en een plek creëren waar mensen zich thuis voelen,\" zegt Marco.",
+        "© 2026 La Dolce Vita": "© 2026 La Dolce Vita",
+        "© 2026 La Dolce Vita | Grazie Mille": "© 2026 La Dolce Vita | Grazie mille",
+        "© 2026 La Dolce Vita | Join The Family": "© 2026 La Dolce Vita | Word lid van onze familie",
+        "© 2026 La Dolce Vita | Dare to Try": "© 2026 La Dolce Vita | Durf jij het aan?"
+    });
+
+    Object.assign(translations.fr, {
+        "La Dolce Vita | Italian Restaurant": "La Dolce Vita | Restaurant italien",
+        "Menu | La Dolce Vita": "Menu | La Dolce Vita",
+        "Reservations | La Dolce Vita": "Réservations | La Dolce Vita",
+        "Contact | La Dolce Vita": "Contact | La Dolce Vita",
+        "Careers | La Dolce Vita": "Carrières | La Dolce Vita",
+        "La Bestia Challenge | La Dolce Vita": "Défi La Bestia | La Dolce Vita",
+        "Drinks | La Dolce Vita": "Boissons | La Dolce Vita",
+        "Our Story | La Dolce Vita": "Notre histoire | La Dolce Vita",
+        "Benvenuti a La Dolce Vita": "Bienvenue chez La Dolce Vita",
+        "Reserve Table": "Réserver une table",
+        "John Doe": "Jean Dupont",
+        "Choose language": "Choisir une langue",
+        "We look forward to welcoming you at La Dolce Vita 🍷": "Nous avons hâte de vous accueillir à La Dolce Vita 🍷",
+        "Chianti Classico (Tuscany)": "Chianti Classico (Toscane)",
+        "Barolo (Piedmont)": "Barolo (Piémont)",
+        "Nero d'Avola (Sicily)": "Nero d'Avola (Sicile)",
+        "Vermentino (Sardinia)": "Vermentino (Sardaigne)",
+        "Caprese Salad": "Salade caprese",
+        "Pasta": "Pâtes",
+        "Pizza": "Pizza",
+        "San Pellegrino Sparkling Water": "Eau pétillante San Pellegrino",
+        "Still Water": "Eau plate",
+        "Fresh Orange Juice": "Jus d'orange frais",
+        "Homemade Lemonade": "Limonade maison",
+        "🍕 La Bestia – 1 Meter Pizza Challenge": "🍕 La Bestia – défi de la pizza d'un mètre",
+        "100 cm diameter": "100 cm de diamètre",
+        "• Approximately": "• Environ",
+        "Half Margherita. Half Diavola. Burrata crown in the center.": "Moitié Margherita, moitié Diavola, avec une couronne de burrata au centre.",
+        "Approximately 4–5 kg": "Environ 4–5 kg",
+        "✔ Reservation Confirmed!": "✔ Réservation confirmée !",
+        "Our goal has always been simple: create memorable meals and a place where people feel at home, says Marco.": "Notre objectif a toujours été simple : créer des repas mémorables et un lieu où chacun se sent chez soi, explique Marco.",
+        "\"Our goal has always been simple: create memorable meals and a place where people feel at home,\" says Marco.": "« Notre objectif a toujours été simple : créer des repas mémorables et un lieu où chacun se sent chez soi », explique Marco.",
+        "© 2026 La Dolce Vita": "© 2026 La Dolce Vita",
+        "© 2026 La Dolce Vita | Grazie Mille": "© 2026 La Dolce Vita | Grazie mille",
+        "© 2026 La Dolce Vita | Join The Family": "© 2026 La Dolce Vita | Rejoignez la famille",
+        "© 2026 La Dolce Vita | Dare to Try": "© 2026 La Dolce Vita | Osez essayer"
+    });
+
+    Object.assign(translations.de, {
+        "La Dolce Vita | Italian Restaurant": "La Dolce Vita | Italienisches Restaurant",
+        "Menu | La Dolce Vita": "Speisekarte | La Dolce Vita",
+        "Reservations | La Dolce Vita": "Reservierungen | La Dolce Vita",
+        "Contact | La Dolce Vita": "Kontakt | La Dolce Vita",
+        "Careers | La Dolce Vita": "Karriere | La Dolce Vita",
+        "La Bestia Challenge | La Dolce Vita": "La-Bestia-Herausforderung | La Dolce Vita",
+        "Drinks | La Dolce Vita": "Getränke | La Dolce Vita",
+        "Our Story | La Dolce Vita": "Unsere Geschichte | La Dolce Vita",
+        "Benvenuti a La Dolce Vita": "Willkommen bei La Dolce Vita",
+        "Reserve Table": "Tisch reservieren",
+        "John Doe": "Max Mustermann",
+        "Choose language": "Sprache wählen",
+        "We look forward to welcoming you at La Dolce Vita 🍷": "Wir freuen uns darauf, Sie bei La Dolce Vita begrüßen zu dürfen 🍷",
+        "Chianti Classico (Tuscany)": "Chianti Classico (Toskana)",
+        "Barolo (Piedmont)": "Barolo (Piemont)",
+        "Nero d'Avola (Sicily)": "Nero d'Avola (Sizilien)",
+        "Vermentino (Sardinia)": "Vermentino (Sardinien)",
+        "Caprese Salad": "Caprese-Salat",
+        "Pasta": "Pasta",
+        "Pizza": "Pizza",
+        "San Pellegrino Sparkling Water": "San-Pellegrino-Mineralwasser mit Kohlensäure",
+        "Still Water": "Stilles Wasser",
+        "Fresh Orange Juice": "Frischer Orangensaft",
+        "Homemade Lemonade": "Hausgemachte Limonade",
+        "🍕 La Bestia – 1 Meter Pizza Challenge": "🍕 La Bestia – 1-Meter-Pizza-Herausforderung",
+        "100 cm diameter": "100 cm Durchmesser",
+        "• Approximately": "• Ungefähr",
+        "Half Margherita. Half Diavola. Burrata crown in the center.": "Zur Hälfte Margherita, zur Hälfte Diavola, mit Burrata in der Mitte.",
+        "Approximately 4–5 kg": "Ungefähr 4–5 kg",
+        "✔ Reservation Confirmed!": "✔ Reservierung bestätigt!",
+        "Our goal has always been simple: create memorable meals and a place where people feel at home, says Marco.": "Unser Ziel war immer einfach: unvergessliche Mahlzeiten und einen Ort zu schaffen, an dem sich Menschen zu Hause fühlen, sagt Marco.",
+        "\"Our goal has always been simple: create memorable meals and a place where people feel at home,\" says Marco.": "„Unser Ziel war immer einfach: unvergessliche Mahlzeiten und einen Ort zu schaffen, an dem sich Menschen zu Hause fühlen“, sagt Marco.",
+        "© 2026 La Dolce Vita": "© 2026 La Dolce Vita",
+        "© 2026 La Dolce Vita | Grazie Mille": "© 2026 La Dolce Vita | Grazie mille",
+        "© 2026 La Dolce Vita | Join The Family": "© 2026 La Dolce Vita | Werden Sie Teil der Familie",
+        "© 2026 La Dolce Vita | Dare to Try": "© 2026 La Dolce Vita | Trauen Sie sich"
+    });
+
     const languageOptions = [
         ["en", "🇬🇧 EN"],
         ["nl", "🇳🇱 NL"],
@@ -94,13 +211,21 @@
         localStorage.setItem(storageKey, currentLanguage);
         document.documentElement.lang = currentLanguage;
 
+        const title = document.querySelector("title");
+        if (title) {
+            title.dataset.i18n ||= title.textContent;
+            const value = translated(title.dataset.i18n, currentLanguage);
+            if (title.textContent !== value) title.textContent = value;
+        }
+
         document.querySelectorAll("[data-i18n]").forEach((element) => {
             const source = element.dataset.i18n;
             const value = translated(source, currentLanguage);
             if (element.tagName === "TITLE" || element.tagName === "OPTION") {
-                element.textContent = value;
+                if (element.textContent !== value) element.textContent = value;
             } else {
-                element.textContent = `${element.dataset.i18nPrefix || ""}${value}${element.dataset.i18nSuffix || ""}`;
+                const content = `${element.dataset.i18nPrefix || ""}${value}${element.dataset.i18nSuffix || ""}`;
+                if (element.textContent !== content) element.textContent = content;
             }
         });
 
@@ -110,15 +235,24 @@
         document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
             element.alt = translated(element.dataset.i18nAlt, currentLanguage);
         });
-        document.querySelectorAll("#language-selector option").forEach((option) => {
-            option.selected = option.value === currentLanguage;
-        });
+        const selector = document.getElementById("language-selector");
+        if (selector) {
+            selector.value = currentLanguage;
+            const label = translated("Choose language", currentLanguage);
+            selector.setAttribute("aria-label", label);
+            selector.title = label;
+        }
+        if (typeof placeLanguageSelector === "function") placeLanguageSelector();
     }
 
+    let placeLanguageSelector = () => {};
+
     function installSelector() {
+        if (document.getElementById("language-selector")) return;
         const selector = document.createElement("select");
         selector.id = "language-selector";
         selector.setAttribute("aria-label", "Choose language");
+        selector.setAttribute("title", "Choose language");
         selector.innerHTML = languageOptions.map(([code, label]) => `<option value="${code}">${label}</option>`).join("");
 
         const style = document.createElement("style");
@@ -129,6 +263,8 @@
                 right: 12px;
                 z-index: 1200;
                 min-width: 92px;
+                width: auto;
+                max-width: calc(100vw - 24px);
                 padding: 7px 9px;
                 border: 1px solid rgba(255,255,255,.55);
                 border-radius: 4px;
@@ -143,13 +279,15 @@
         document.head.append(style);
         document.body.append(selector);
 
-        const placeSelector = () => {
+        placeLanguageSelector = () => {
             const nav = document.querySelector("nav");
             const navHeight = nav ? nav.getBoundingClientRect().height : 0;
             selector.style.setProperty("--language-selector-top", `${Math.ceil(navHeight + 8)}px`);
         };
-        placeSelector();
-        window.addEventListener("resize", placeSelector);
+        placeLanguageSelector();
+        window.addEventListener("resize", placeLanguageSelector);
+        const nav = document.querySelector("nav");
+        if (nav && window.ResizeObserver) new ResizeObserver(placeLanguageSelector).observe(nav);
         selector.addEventListener("change", () => applyLanguage(selector.value));
     }
 
@@ -169,11 +307,14 @@
         applyLanguage(currentLanguage);
 
         const observer = new MutationObserver((records) => {
+            let addedContent = false;
             records.forEach((record) => record.addedNodes.forEach((node) => {
+                if (node.nodeType === Node.TEXT_NODE && node.parentElement?.closest("[data-i18n]")) return;
                 if (node.nodeType === Node.TEXT_NODE) markText(node.parentElement || document.body);
                 else if (node.nodeType === Node.ELEMENT_NODE) markText(node);
+                addedContent = true;
             }));
-            applyLanguage(currentLanguage);
+            if (addedContent) applyLanguage(currentLanguage);
         });
         observer.observe(document.body, { childList: true, subtree: true });
     }
